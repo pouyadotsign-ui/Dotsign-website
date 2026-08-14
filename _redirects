@@ -1,0 +1,24 @@
+# Preserve old live URLs after the rebuild (301 = tells Google it moved).
+# These point straight at the final clean URL (not the .html file) so there's
+# only ever one redirect hop, and Google lands on the actual canonical page.
+/ticker-bar-p25                  /ticker-bar                 301
+/led-screen-p186                 /led-screen                 301
+/guide-led-sign-cost-australia   /guide-led-sign-cost        301
+/guide-pixel-pitch-explained     /guide-pixel-pitch          301
+/ticker-bar-p25.html             /ticker-bar                 301
+/led-screen-p186.html            /led-screen                 301
+/guide-led-sign-cost-australia.html   /guide-led-sign-cost   301
+/guide-pixel-pitch-explained.html     /guide-pixel-pitch     301
+
+# Special case: index.html must redirect to the root, not to "/index".
+# Must come before the generic *.html rule below (first match wins).
+/index.html   /   301!
+
+# Force every other *.html URL to redirect to its clean, canonical equivalent.
+# Without this, Netlify serves /page and /page.html as two separate 200 OK
+# pages with identical content — the exact issue Search Console flagged as
+# "Alternate page with proper canonical tag" and the reason most of the
+# previous build never got indexed. The trailing "!" forces the redirect
+# even though the .html file itself exists on disk (Netlify skips
+# unforced redirects when the request matches a real file).
+/*.html   /:splat   301!

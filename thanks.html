@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://dotsign.com.au/thanks">
+<meta name="robots" content="noindex,follow">
+<title>Thanks — Dot Sign Melbourne</title>
+<meta name="description" content="Thanks for your quote request — Dot Sign will be in touch within one business day.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2020%2020'%3E%3Cpath%20d='M9.5%200%20H4.75%20A4.75%204.75%200%200%200%204.75%209.5%20H9.5%20Z'%20fill='%230D0D0D'/%3E%3Ccircle%20cx='15.25'%20cy='4.75'%20r='4.75'%20fill='%230D0D0D'/%3E%3Ccircle%20cx='4.75'%20cy='15.25'%20r='4.75'%20fill='%23FFC200'/%3E%3Cpath%20d='M10.5%2010.5%20H15.25%20A4.75%204.75%200%200%201%2015.25%2020%20H10.5%20Z'%20fill='%230D0D0D'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<!-- Google Analytics 4 — replace G-XXXXXXXXXX with real Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="logo-mark" href="/"><svg width="26" height="26" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 0 H4.75 A4.75 4.75 0 0 0 4.75 9.5 H9.5 Z" fill="#F4F3EF"/><circle cx="15.25" cy="4.75" r="4.75" fill="#F4F3EF"/><circle cx="4.75" cy="15.25" r="4.75" fill="#FFC200"/><path d="M10.5 10.5 H15.25 A4.75 4.75 0 0 1 15.25 20 H10.5 Z" fill="#F4F3EF"/></svg><span class="logo-word"><span>DOT</span><span>SIGN</span></span></a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+<a href="/products">Products</a>
+<a href="/how-we-work">How We Work</a>
+<a href="/our-work">Our Work</a>
+<a href="/industries">Industries</a>
+<a href="/guides">Guides</a>
+<a href="/faq">FAQ</a>
+<a href="/about">About</a>
+
+      <a href="/contact" class="btn btn-sm">Get a quote</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero center" style="max-width:640px">
+  <div class="wrap">
+    <span class="kicker">Thank you</span>
+    <h1>Got it — thanks!</h1>
+    <p class="lede">Your quote request is in. We'll come back to you within one business day with a recommendation and a clear price.</p>
+    <div class="cta-row" style="justify-content:center">
+      <a href="/" class="btn-outline">Back to home</a>
+      <a href="https://wa.me/61422575840" class="btn">WhatsApp us in the meantime</a>
+    </div>
+  </div>
+</section>
+
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-btn lb-close" id="lb-close" aria-label="Close">&times;</button>
+  <button class="lb-btn lb-prev" id="lb-prev" aria-label="Previous">&#8249;</button>
+  <img id="lb-img" alt="">
+  <button class="lb-btn lb-next" id="lb-next" aria-label="Next">&#8250;</button>
+</div>
+<script>
+(function(){
+  var imgs = Array.prototype.slice.call(document.querySelectorAll('.gallery img'));
+  if(!imgs.length) return;
+  var lb=document.getElementById('lightbox'), lbImg=document.getElementById('lb-img'), idx=0;
+  function show(i){ idx=(i+imgs.length)%imgs.length; lbImg.src=imgs[idx].src; lbImg.alt=imgs[idx].alt; }
+  imgs.forEach(function(im,i){ im.parentElement.addEventListener('click',function(){ show(i); lb.classList.add('open'); }); });
+  document.getElementById('lb-close').onclick=function(){ lb.classList.remove('open'); };
+  document.getElementById('lb-prev').onclick=function(e){ e.stopPropagation(); show(idx-1); };
+  document.getElementById('lb-next').onclick=function(e){ e.stopPropagation(); show(idx+1); };
+  lb.addEventListener('click',function(e){ if(e.target===lb) lb.classList.remove('open'); });
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key==='Escape') lb.classList.remove('open');
+    if(e.key==='ArrowLeft') show(idx-1);
+    if(e.key==='ArrowRight') show(idx+1);
+  });
+})();
+</script>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo-mark"><svg width="26" height="26" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 0 H4.75 A4.75 4.75 0 0 0 4.75 9.5 H9.5 Z" fill="#F4F3EF"/><circle cx="15.25" cy="4.75" r="4.75" fill="#F4F3EF"/><circle cx="4.75" cy="15.25" r="4.75" fill="#FFC200"/><path d="M10.5 10.5 H15.25 A4.75 4.75 0 0 1 15.25 20 H10.5 Z" fill="#F4F3EF"/></svg><span class="logo-word"><span>DOT</span><span>SIGN</span></span></div>
+        <p class="small" style="max-width:300px;margin-top:12px">LED signage, supplied and supported end to end.</p>
+        <div class="badge-row">
+          <span class="badge">Melbourne, VIC</span>
+          <span class="badge">AU &amp; NZ delivery</span>
+          <span class="badge">ABN 39 700 133 517</span>
+        </div>
+      </div>
+      <div class="foot-links">
+        <a href="/products">Products</a>
+        <a href="/how-we-work">How We Work</a>
+        <a href="/our-work">Our Work</a>
+        <a href="/industries">Industries</a>
+        <a href="/guides">Guides</a>
+        <a href="/faq">FAQ</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      &copy; 2026 Dot Sign Solutions Pty Ltd &middot; ABN 39 700 133 517 &middot; Melbourne, Australia &middot;
+      <a href="tel:+61422575840">0422 575 840</a> &middot;
+      <a href="mailto:hello@dotsign.com.au">hello@dotsign.com.au</a>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
