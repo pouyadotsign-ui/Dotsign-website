@@ -215,9 +215,13 @@ footer.site{border-top:1px solid var(--line);padding:42px 0 28px;background:var(
 a.card{display:block;color:inherit;text-decoration:none}
 a.card:hover h3{color:var(--yellow)}
 .card .more{
-  display:inline-block;margin-top:16px;font-size:13.5px;font-weight:600;color:var(--yellow);
+  display:inline-block;margin-top:16px;font-size:13.5px;font-weight:600;
+  color:var(--ink);
+  text-decoration:underline dotted rgba(255,194,0,.6);
+  text-decoration-thickness:1px;text-underline-offset:4px;
+  transition:color .15s,text-decoration-color .15s;
 }
-a.card:hover .more{text-decoration:underline}
+a.card:hover .more{color:var(--yellow);text-decoration-color:var(--yellow)}
 
 /* spec tables (restored from original product pages) */
 .spec-table{width:100%;border-collapse:collapse;margin-top:8px}
@@ -227,10 +231,42 @@ a.card:hover .more{text-decoration:underline}
 .spec-table th{color:var(--ink);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em}
 .spec-table td{color:var(--text-dim)}
 .spec-table tr:last-child td{border-bottom:none}
-.spec-table a{color:var(--yellow);font-weight:600}
+.spec-table a{
+  color:var(--ink);font-weight:600;
+  text-decoration:underline dotted rgba(255,194,0,.6);
+  text-decoration-thickness:1px;text-underline-offset:4px;
+  transition:color .15s,text-decoration-color .15s;
+}
+.spec-table a:hover{color:var(--yellow);text-decoration-color:var(--yellow)}
 @media (max-width:640px){
   .spec-table thead{display:none}
   .spec-table tr{display:block;border-bottom:1px solid var(--line);padding:10px 0}
   .spec-table td{display:flex;justify-content:space-between;border:none;padding:6px 0}
   .spec-table td:before{content:attr(data-label);color:var(--ink);font-weight:600;margin-right:16px}
 }
+
+/* ---- Our Solutions pages ---------------------------------------------- */
+
+/* hub cards: heading is an h2 so the page outline has no skip,
+   sized and coloured exactly like a card h3 */
+.card h2{font-size:1.1rem;margin:0 0 10px;line-height:1.3;font-weight:700;color:var(--ink)}
+a.card:hover h2{color:var(--yellow)}
+
+/* text links: white word, fine dotted yellow rule underneath */
+.link-u{
+  color:var(--ink);font-weight:600;
+  text-decoration:underline dotted rgba(255,194,0,.6);
+  text-decoration-thickness:1px;text-underline-offset:4px;
+  transition:color .15s,text-decoration-color .15s;
+}
+.link-u:hover{color:var(--yellow);text-decoration-color:var(--yellow)}
+
+/* install-photo galleries on the solution pages: real photographs on an even
+   grid — no hero tile, because a lot of these shots are portrait and any 16:9
+   lead slot crops them to nothing. Every photo crops to fill a dark 4:3 tile
+   and opens full-size in the lightbox. */
+.gallery.sol-gallery{grid-template-columns:repeat(4,1fr);gap:12px}
+.gallery.sol-gallery .thumb{aspect-ratio:4/3;background:#0D0D0D;border-radius:10px}
+.gallery.sol-gallery .thumb img{object-fit:cover}
+@media (max-width:900px){.gallery.sol-gallery{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:600px){.gallery.sol-gallery{grid-template-columns:repeat(2,1fr)}}
