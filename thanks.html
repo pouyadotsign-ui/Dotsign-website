@@ -23,6 +23,11 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-SWYJHMDBGP');
+  // Reaching this page means the quote form was submitted successfully
+  // (FormSubmit's _next redirect only fires on success). Fire generate_lead
+  // explicitly here rather than relying on GA4's automatic detection, which
+  // only caught 1 of 5 real submissions in August 2026 — see DSS-130.
+  gtag('event', 'generate_lead', {'event_category':'engagement','event_label':'quote_form'});
 </script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Dot Sign Solutions", "url": "https://dotsign.com.au/", "telephone": "+61422575840", "email": "hello@dotsign.com.au", "address": {"@type": "PostalAddress", "addressLocality": "Melbourne", "addressRegion": "VIC", "addressCountry": "AU"}, "areaServed": ["AU", "NZ"], "taxID": "ABN 39 700 133 517"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dotsign.com.au/"}, {"@type": "ListItem", "position": 2, "name": "Thanks", "item": "https://dotsign.com.au/thanks"}]}</script>
